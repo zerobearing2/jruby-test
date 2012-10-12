@@ -1,4 +1,8 @@
 JrubyTest::Application.routes.draw do
+  match 'say(/:words)' => 'home#say'
+  match 'ping' => 'home#ping'
+  root :to => 'home#say'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
